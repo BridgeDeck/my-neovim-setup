@@ -38,23 +38,14 @@ end)
 
 -- Windowing
 
-local current_file = vim.b[0]
-
-for k,v in pairs(current_file) do
-  print(k, v)
-end
-
--- Vertical split for essential files (Like the README, root build file, and any other deemed important)
+-- Bash terminal
 vim.cmd("vsplit")
-
--- local deemed_important = {}
-
--- for k,v in pairs(deemed_important) do
-  
--- end
 vim.cmd("terminal")
+
+-- Lazy Git TUI
 vim.cmd("split")
 vim.cmd("terminal lazygit")
 
+-- Nvim Tree
 vim.cmd("NvimTreeToggle")
 vim.cmd("wincmd l")
